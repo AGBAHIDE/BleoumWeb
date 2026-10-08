@@ -1,0 +1,165 @@
+/* =========================================================
+   BLEOUM SERVICE - FEUILLES DE STYLE GLOBALES
+   Couleur de base : Jaune-Orange du logo (#F5A623 / #E68A00)
+   Police Titres : 'Playfair Display' / Serif rétro-moderne
+   Police Corps : 'Plus Jakarta Sans', sans-serif
+   ========================================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Jaune-Orange du logo Bleoum Service */
+  --primary: #F5A623;
+  --primary-dark: #E68A00;
+  --primary-deep: #D07B00;
+  --primary-light: #FFF8EB;
+  --primary-soft: #FEF0D4;
+  --primary-glow: rgba(245, 166, 35, 0.35);
+
+  /* Couleurs secondaires et neutres */
+  --secondary: #4A4A4A;
+  --text-main: #1D1D1D;
+  --text-muted: #6B7280;
+  --text-light: #9CA3AF;
+  --bg-body: #FFFFFF;
+  --bg-cream: #FAF7F0;
+  --border-light: #ECE7DE;
+  --border-card: #F0ECE4;
+  
+  /* Typographie */
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  
+  /* Ombres douces */
+  --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 6px 20px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 14px 34px rgba(245, 166, 35, 0.12);
+  --shadow-card: 0 4px 16px rgba(0, 0, 0, 0.05);
+
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-full: 9999px;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--text-main);
+  background-color: var(--bg-body);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  font-family: var(--font-sans);
+}
+
+input, select {
+  font-family: var(--font-sans);
+  outline: none;
+  border: none;
+}
+
+/* Titres caractéristiques de la maquette */
+.heading-display {
+  font-family: var(--font-serif);
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  color: #1F2937;
+}
+
+.heading-display .highlight-orange {
+  color: var(--primary);
+}
+
+.subheading-text {
+  font-size: 14px;
+  color: #6B7280;
+  max-width: 580px;
+  line-height: 1.7;
+}
+
+/* Boutons communs */
+.btn-primary-pill {
+  background: var(--primary);
+  color: #FFFFFF;
+  padding: 12px 26px;
+  border-radius: var(--radius-full);
+  font-weight: 700;
+  font-size: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 14px var(--primary-glow);
+}
+
+.btn-primary-pill:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(230, 138, 0, 0.4);
+}
+
+.btn-outline-pill {
+  background: #FFFFFF;
+  color: var(--primary-dark);
+  border: 1.5px solid var(--primary);
+  padding: 11px 24px;
+  border-radius: var(--radius-full);
+  font-weight: 700;
+  font-size: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.25s ease;
+}
+
+.btn-outline-pill:hover {
+  background: var(--primary-light);
+  transform: translateY(-2px);
+}
+
+/* Animations légères */
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.floating-badge {
+  animation: floatSlow 4s ease-in-out infinite;
+}
+
+/* Scrollbar personnalisée */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F3F4F6;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 4px;
+}

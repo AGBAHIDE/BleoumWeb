@@ -1,0 +1,533 @@
+/* =========================================================
+   BLEOUM DENSE GARNISHED HERO - PURE WHITE & ORANGE-JAUNE THEME
+   - Descente fluide JS échelonnée des éléments du cadre
+   - Feuilles en déplacement permanent du haut vers le bas (chute tour à tour)
+   - Dimensions agrandies et généreuses pour les éléments restants
+   ========================================================= */
+
+.bleoum-garnished-hero {
+  background-color: #FFFFFF;
+  background-image: radial-gradient(circle at center, #FFFFFF 0%, #FAF8F5 100%);
+  position: relative;
+  overflow: hidden;
+  min-height: 600px;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid #ECE7DE;
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   1. FEUILLES EN DÉPLACEMENT PERMANENT (DU HAUT VERS LE BAS)
+   ========================================================= */
+
+.hero-falling-leaves-container {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 4;
+  overflow: hidden;
+}
+
+.hero-falling-leaf-wrapper {
+  position: absolute;
+  top: -80px;
+  animation-name: leafFallDrift;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  will-change: transform, top, opacity;
+}
+
+.hero-falling-leaf-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.08));
+  animation: leafTumble 3.8s ease-in-out infinite alternate;
+}
+
+@keyframes leafFallDrift {
+  0% {
+    top: -80px;
+    transform: translateX(0) rotate(0deg);
+    opacity: 0;
+  }
+  8% {
+    opacity: 0.9;
+  }
+  30% {
+    transform: translateX(35px) rotate(50deg);
+  }
+  60% {
+    transform: translateX(-30px) rotate(110deg);
+  }
+  85% {
+    transform: translateX(25px) rotate(175deg);
+    opacity: 0.9;
+  }
+  100% {
+    top: calc(100% + 80px);
+    transform: translateX(-20px) rotate(230deg);
+    opacity: 0;
+  }
+}
+
+@keyframes leafTumble {
+  0% {
+    transform: rotateX(0deg) rotateY(0deg) scale(1);
+  }
+  50% {
+    transform: rotateX(35deg) rotateY(45deg) scale(0.92);
+  }
+  100% {
+    transform: rotateX(0deg) rotateY(0deg) scale(1);
+  }
+}
+
+/* =========================================================
+   2. CADRE DENSE D'INGRÉDIENTS CULINAIRES & BOUTIQUES (PNGs)
+   ========================================================= */
+
+.hero-dense-garnished-frame {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.garnish-dense-item {
+  position: absolute;
+  filter: drop-shadow(0 12px 28px rgba(0, 0, 0, 0.11));
+  transform-origin: center top;
+}
+
+.dense-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  user-select: none;
+  pointer-events: none;
+}
+
+/* --- Positionnement & Dimensions Agrandies des Éléments du Cadre --- */
+
+/* BORDURE DU HAUT */
+.item-top-left-herbs {
+  top: -20px;
+  left: 10px;
+  width: 240px;
+}
+
+.item-top-center-spices {
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 370px;
+}
+
+.item-top-right-prod-tomatoes {
+  top: -15px;
+  right: 80px;
+  width: 220px;
+}
+
+.item-top-right-dish-special {
+  top: 55px;
+  right: -35px;
+  width: 250px;
+}
+
+/* BORDURE GAUCHE */
+.item-left-food-dish {
+  top: 13%;
+  left: -45px;
+  width: 250px;
+}
+
+.item-left-boutique-prod {
+  top: 49%;
+  left: 0px;
+  width: 175px;
+}
+
+.item-left-boutique-bottle {
+  top: 68%;
+  left: -30px;
+  width: 145px;
+}
+
+/* BORDURE DROITE */
+.item-right-dish-food06 {
+  top: 27%;
+  right: -40px;
+  width: 260px;
+}
+
+/* BORDURE DU BAS */
+.item-bottom-left-about-basket {
+  bottom: -20px;
+  left: 10px;
+  width: 255px;
+}
+
+.item-bottom-left-fries {
+  bottom: -25px;
+  left: 235px;
+  width: 230px;
+}
+
+.item-bottom-right-chef-plate {
+  bottom: -25px;
+  right: -15px;
+  width: 275px;
+}
+
+.item-bottom-right-grilled-masala {
+  bottom: -20px;
+  right: 235px;
+  width: 200px;
+}
+
+/* =========================================================
+   3. CONTENU CENTRAL (ORANGE-JAUNE BLEOUM & TEXTE DU USER)
+   ========================================================= */
+
+.hero-center-wrapper {
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-center-box {
+  max-width: 860px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px 16px;
+  position: relative;
+}
+
+/* Sur-titre script ambré */
+.hero-sub-script-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 26px;
+  font-weight: 700;
+  color: #D97706;
+  margin-bottom: 8px;
+  letter-spacing: 0.2px;
+}
+
+.hero-sparkle-icon {
+  color: #E68A00;
+  flex-shrink: 0;
+}
+
+/* Grand Titre Principal */
+.hero-main-title {
+  font-size: 52px;
+  font-weight: 900;
+  line-height: 1.15;
+  color: #071C1F;
+  margin: 4px 0 24px;
+  letter-spacing: -1px;
+}
+
+.hero-title-orange-accent {
+  color: #E68A00;
+}
+
+/* Ligne des Boutons d'Action */
+.hero-buttons-action-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+/* Bouton Primaire Orange-Jaune Bleoum */
+.btn-bleoum-hero-primary {
+  background: #E68A00;
+  color: #FFFFFF !important;
+  font-weight: 800;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  padding: 15px 32px;
+  border-radius: 6px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 18px rgba(230, 138, 0, 0.35);
+  border: 1.5px solid #E68A00;
+}
+
+.btn-bleoum-hero-primary:hover {
+  background: #D47A00;
+  border-color: #D47A00;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(230, 138, 0, 0.45);
+}
+
+.btn-bleoum-hero-primary:active {
+  transform: translateY(0);
+}
+
+.btn-arrow-icon {
+  transition: transform 0.25s ease;
+}
+
+.btn-bleoum-hero-primary:hover .btn-arrow-icon {
+  transform: translateX(4px);
+}
+
+/* Bouton Secondaire Contour Orange-Jaune */
+.btn-bleoum-hero-outline {
+  background: #FFFFFF;
+  color: #E68A00 !important;
+  font-weight: 800;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  padding: 15px 30px;
+  border-radius: 6px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1.5px solid #E68A00;
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+}
+
+.btn-bleoum-hero-outline:hover {
+  background: #FFF8EB;
+  border-color: #D47A00;
+  color: #D47A00 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(230, 138, 0, 0.15);
+}
+
+.btn-bleoum-hero-outline:active {
+  transform: translateY(0);
+}
+
+/* =========================================================
+   4. ANIMATIONS D'ENTRÉE DU TEXTE CENTRAL
+   ========================================================= */
+
+@keyframes animFadeDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-25px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes animZoomIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.92) translateY(15px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes animFadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.anim-fade-down {
+  animation: animFadeDown 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both;
+}
+
+.anim-zoom-in {
+  animation: animZoomIn 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.2s both;
+}
+
+.anim-fade-up {
+  animation: animFadeUp 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.3s both;
+}
+
+.anim-fade-up-delay {
+  animation: animFadeUp 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.42s both;
+}
+
+/* =========================================================
+   5. RESPONSIVE DESIGN COMPLET (DESKTOP, TABLETTE & MOBILE)
+   ========================================================= */
+
+@media (max-width: 1200px) {
+  .hero-main-title {
+    font-size: 44px;
+  }
+  .item-top-left-herbs {
+    width: 190px;
+  }
+  .item-top-center-spices {
+    width: 310px;
+  }
+  .item-top-right-dish-special {
+    width: 200px;
+  }
+  .item-top-right-prod-tomatoes {
+    width: 180px;
+  }
+  .item-left-food-dish,
+  .item-right-dish-food06 {
+    width: 210px;
+  }
+  .item-bottom-left-fries,
+  .item-bottom-right-grilled-masala {
+    display: none;
+  }
+}
+
+@media (max-width: 991px) {
+  .bleoum-garnished-hero {
+    min-height: 520px;
+    height: auto;
+    padding: 60px 16px;
+  }
+  .hero-main-title {
+    font-size: 38px;
+    margin: 4px 0 20px;
+  }
+  .hero-sub-script-badge {
+    font-size: 22px;
+  }
+  .item-top-left-herbs {
+    width: 150px;
+    top: -10px;
+    left: 5px;
+  }
+  .item-top-center-spices {
+    width: 260px;
+  }
+  .item-top-right-prod-tomatoes {
+    width: 140px;
+    right: 40px;
+  }
+  .item-top-right-dish-special {
+    width: 160px;
+    top: 40px;
+  }
+  .item-left-food-dish,
+  .item-right-dish-food06 {
+    width: 170px;
+    opacity: 0.35;
+  }
+  .item-bottom-left-about-basket,
+  .item-bottom-right-chef-plate {
+    width: 190px;
+    opacity: 0.4;
+  }
+}
+
+@media (max-width: 768px) {
+  .bleoum-garnished-hero {
+    min-height: 480px;
+    padding: 50px 12px;
+  }
+  .hero-center-box {
+    padding: 10px 8px;
+  }
+  .hero-main-title {
+    font-size: 32px;
+    margin: 4px 0 18px;
+  }
+  .hero-sub-script-badge {
+    font-size: 20px;
+  }
+  .hero-buttons-action-row {
+    gap: 12px;
+  }
+  .btn-bleoum-hero-primary,
+  .btn-bleoum-hero-outline {
+    padding: 13px 22px;
+    font-size: 13px;
+  }
+  /* Baisse discrète d'opacité et taille des PNGs de fond pour lisibilité parfaite */
+  .item-top-left-herbs,
+  .item-top-right-prod-tomatoes,
+  .item-left-food-dish,
+  .item-right-dish-food06,
+  .item-bottom-left-about-basket,
+  .item-bottom-right-chef-plate {
+    opacity: 0.22;
+    filter: drop-shadow(0 4px 10px rgba(0,0,0,0.06));
+  }
+  .item-top-center-spices {
+    width: 200px;
+    opacity: 0.65;
+  }
+  .item-left-boutique-prod,
+  .item-left-boutique-bottle {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .bleoum-garnished-hero {
+    padding: 45px 10px 35px;
+    min-height: 450px;
+  }
+  .hero-main-title {
+    font-size: 27px;
+    line-height: 1.2;
+    margin: 2px 0 16px;
+  }
+  .hero-sub-script-badge {
+    font-size: 18px;
+    margin-bottom: 6px;
+  }
+  .hero-buttons-action-row {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+  .btn-bleoum-hero-primary,
+  .btn-bleoum-hero-outline {
+    width: 100%;
+    justify-content: center;
+    padding: 13px 18px;
+    font-size: 13px;
+    border-radius: 8px;
+  }
+  .hero-falling-leaf-wrapper {
+    transform: scale(0.75);
+  }
+}
+
+@media (max-width: 380px) {
+  .hero-main-title {
+    font-size: 24px;
+  }
+  .hero-sub-script-badge {
+    font-size: 16px;
+  }
+}

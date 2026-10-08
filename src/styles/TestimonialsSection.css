@@ -1,0 +1,309 @@
+/* =========================================================
+   CAFERIO STYLE TESTIMONIALS SECTION (PURE REACT & CSS)
+   ========================================================= */
+
+.caferio-testimonials-section {
+  background: #F7F8FA;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Forme de fond décorative */
+.caferio-bg-shape {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background: #FFFFFF;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 0);
+  z-index: 1;
+}
+
+/* En-tête de Section Caferio */
+.section-heading-caferio {
+  position: relative;
+  z-index: 2;
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.caferio-sub-badge {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #E68A00;
+  background: #FFF3E0;
+  padding: 6px 16px;
+  border-radius: 9999px;
+  margin-bottom: 14px;
+}
+
+.caferio-section-title {
+  font-size: 38px;
+  font-weight: 800;
+  color: #071C1F;
+  line-height: 1.25;
+  margin-bottom: 12px;
+}
+
+.caferio-section-title span {
+  color: #E68A00;
+  position: relative;
+}
+
+.caferio-section-desc {
+  font-size: 15px;
+  color: #6B7280;
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* =========================================================
+   VIEWPORT ET PISTE DE DÉFILEMENT (SANS AUCUN FONDU)
+   ========================================================= */
+
+.caferio-testimonials-viewport {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  padding: 12px 0 20px;
+  z-index: 2;
+}
+
+.caferio-testimonials-track {
+  display: flex;
+  align-items: stretch;
+  will-change: transform;
+}
+
+.caferio-testimonial-slide {
+  flex-shrink: 0;
+  box-sizing: border-box;
+  opacity: 1 !important; /* STRICTEMENT AUCUN FONDU */
+}
+
+/* Cartes de Témoignages */
+.caferio-testimonial-card {
+  background: #FFFFFF;
+  border: 1px solid #ECEEEF;
+  border-radius: 16px;
+  padding: 34px 28px 30px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.04);
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+  z-index: 2;
+  opacity: 1 !important; /* AUCUN FONDU */
+}
+
+.caferio-testimonial-card:hover {
+  transform: translateY(-6px);
+  border-color: #FDBA74;
+  box-shadow: 0 18px 40px rgba(230, 138, 0, 0.12);
+}
+
+/* Icône de citation en arrière-plan */
+.card-quote-bg {
+  position: absolute;
+  top: 20px;
+  right: 22px;
+  color: #FFF2DF;
+  opacity: 0.85;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Profil Utilisateur */
+.testi-user-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 18px;
+  position: relative;
+  z-index: 2;
+}
+
+.testi-avatar-wrap {
+  position: relative;
+  width: 62px;
+  height: 62px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  border: 2.5px solid #E68A00;
+  box-shadow: 0 4px 12px rgba(230, 138, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #FFFFFF;
+}
+
+.testi-avatar-wrap svg {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: block;
+}
+
+.testi-verified-dot {
+  position: absolute;
+  bottom: -2px;
+  right: -2px;
+  background: #10B981;
+  color: #FFFFFF;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #FFFFFF;
+  z-index: 3;
+}
+
+.testi-user-meta {
+  flex: 1;
+}
+
+.testi-user-name {
+  font-size: 16.5px;
+  font-weight: 800;
+  color: #071C1F;
+  margin: 0 0 2px;
+  line-height: 1.2;
+}
+
+.testi-user-role {
+  font-size: 12.5px;
+  color: #6B7280;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.testi-tag-badge {
+  display: inline-block;
+  font-size: 10.5px;
+  font-weight: 700;
+  background: #FFF7ED;
+  color: #D97706;
+  border: 1px solid #FFEDD5;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+/* Étoiles de Notation */
+.testi-rating-stars {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 16px;
+  position: relative;
+  z-index: 2;
+}
+
+.rating-score {
+  font-size: 13px;
+  font-weight: 800;
+  color: #111827;
+  margin-left: 6px;
+}
+
+/* Texte de l'avis */
+.testi-quote-text {
+  font-size: 14.5px;
+  color: #4B5563;
+  line-height: 1.7;
+  font-style: italic;
+  margin: 0;
+  flex-grow: 1;
+  position: relative;
+  z-index: 2;
+}
+
+/* Contrôles du Slider */
+.caferio-testi-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  position: relative;
+  z-index: 10;
+  margin-top: 35px;
+}
+
+.caferio-testi-arrow {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  border: 1.5px solid #E5E7EB;
+  color: #071C1F;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.caferio-testi-arrow:hover {
+  background: #E68A00;
+  border-color: #E68A00;
+  color: #FFFFFF;
+  transform: scale(1.08);
+  box-shadow: 0 6px 18px rgba(230, 138, 0, 0.3);
+}
+
+.caferio-testi-arrow:active {
+  transform: scale(0.95);
+}
+
+.caferio-testi-dots {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.caferio-testi-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #D1D5DB;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.caferio-testi-dot.active {
+  width: 28px;
+  border-radius: 9999px;
+  background: #E68A00;
+  box-shadow: 0 2px 8px rgba(230, 138, 0, 0.35);
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .caferio-section-title {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 576px) {
+  .caferio-section-title {
+    font-size: 26px;
+  }
+  .caferio-testimonial-card {
+    padding: 24px 20px;
+  }
+  .testi-avatar-wrap {
+    width: 54px;
+    height: 54px;
+  }
+}

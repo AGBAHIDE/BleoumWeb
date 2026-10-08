@@ -1,0 +1,167 @@
+/* =========================================================
+   MODERN ANIMATIONS ENGINE - ULTRA FLUID GPU-ACCELERATED STYLES
+   ========================================================= */
+
+/* --- 1. Reveal on Scroll Base Classes --- */
+.reveal-init {
+  opacity: 0;
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-up {
+  opacity: 0;
+  transform: translate3d(0, 38px, 0);
+  transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-down {
+  opacity: 0;
+  transform: translate3d(0, -38px, 0);
+  transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-left {
+  opacity: 0;
+  transform: translate3d(-45px, 0, 0);
+  transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translate3d(45px, 0, 0);
+  transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-zoom {
+  opacity: 0;
+  transform: scale3d(0.92, 0.92, 1);
+  transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+/* État Actif (Révélé) */
+.is-revealed,
+.reveal-init.is-revealed,
+.reveal-up.is-revealed,
+.reveal-down.is-revealed,
+.reveal-left.is-revealed,
+.reveal-right.is-revealed,
+.reveal-zoom.is-revealed {
+  opacity: 1 !important;
+  transform: translate3d(0, 0, 0) scale3d(1, 1, 1) !important;
+}
+
+/* Délais en Cascade Prédéfinis */
+.reveal-delay-1 { transition-delay: 0.1s !important; }
+.reveal-delay-2 { transition-delay: 0.2s !important; }
+.reveal-delay-3 { transition-delay: 0.3s !important; }
+.reveal-delay-4 { transition-delay: 0.4s !important; }
+.reveal-delay-5 { transition-delay: 0.5s !important; }
+
+/* --- 2. Effet d'Ondulation au Clic (Ripple Effect) --- */
+.ripple-host {
+  position: relative;
+  overflow: hidden;
+}
+
+.modern-ripple-wave {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.45);
+  transform: scale(0);
+  animation: rippleAnimation 0.65s linear;
+  pointer-events: none;
+  z-index: 100;
+}
+
+.modern-ripple-wave-dark {
+  background: rgba(230, 138, 0, 0.25);
+}
+
+@keyframes rippleAnimation {
+  to {
+    transform: scale(4.5);
+    opacity: 0;
+  }
+}
+
+/* --- 3. 3D Tilt Card Support --- */
+.modern-tilt-card {
+  transition: transform 0.2s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.2s ease;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+.modern-tilt-inner {
+  transform: translateZ(20px);
+}
+
+/* --- 4. Halo Lumineux Suiveur de Souris (Glow Card) --- */
+.glow-card-interactive {
+  position: relative;
+}
+
+.glow-card-interactive::after {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  background: radial-gradient(
+    400px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+    rgba(230, 138, 0, 0.18),
+    transparent 60%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.glow-card-interactive:hover::after {
+  opacity: 1;
+}
+
+/* --- 5. Effet de Flottement Magnétique Doux --- */
+@keyframes modernSubtlePulse {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-4px) scale(1.02);
+  }
+}
+
+.pulse-hover:hover {
+  animation: modernSubtlePulse 2s ease-in-out infinite;
+}
+
+/* --- 6. Accessibilité (Reduced Motion) --- */
+@media (prefers-reduced-motion: reduce) {
+  .reveal-init,
+  .reveal-up,
+  .reveal-down,
+  .reveal-left,
+  .reveal-right,
+  .reveal-zoom,
+  .is-revealed {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  
+  .modern-tilt-card {
+    transform: none !important;
+    transition: none !important;
+  }
+}

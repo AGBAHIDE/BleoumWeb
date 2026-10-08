@@ -1,0 +1,150 @@
+/* =========================================================
+   TOP BEST SELLING CATEGORIES (IMAGE 1 BAS)
+   ========================================================= */
+
+.top-categories-section {
+  padding: 40px 0 60px;
+  background: #FFFFFF;
+}
+
+.categories-header-block {
+  text-align: center;
+  max-width: 620px;
+  margin: 0 auto 36px;
+}
+
+.categories-section-title {
+  font-family: var(--font-serif);
+  font-size: 34px;
+  font-weight: 800;
+  color: #111827;
+  margin-bottom: 12px;
+}
+
+.categories-section-title .accent-orange {
+  color: var(--primary);
+}
+
+.categories-section-desc {
+  font-size: 13.5px;
+  color: #6B7280;
+  line-height: 1.6;
+}
+
+/* Grille des 6 cartes de catégories */
+.categories-slider-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 18px;
+  margin-bottom: 30px;
+}
+
+.category-slider-card {
+  border-radius: var(--radius-md);
+  padding: 24px 12px 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  border: 1px solid transparent;
+}
+
+.category-slider-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+  border-color: rgba(245, 166, 35, 0.3);
+}
+
+/* Couleurs de fond pastel conformes à l'image 1 */
+.card-theme-vegetables { background: #FDE8E8; }
+.card-theme-meats      { background: #EDE9FE; }
+.card-theme-fruits     { background: #FEF9C3; }
+.card-theme-fish       { background: #FCE7F3; }
+.card-theme-drinks     { background: #E0F2FE; }
+.card-theme-snacks     { background: #DCFCE7; }
+
+.category-img-container {
+  width: 90px;
+  height: 80px;
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.category-preview-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.08));
+  transition: transform 0.25s ease;
+}
+
+.category-slider-card:hover .category-preview-image {
+  transform: scale(1.08);
+}
+
+.category-card-name {
+  font-size: 14px;
+  font-weight: 800;
+  color: #1F2937;
+  margin-bottom: 4px;
+}
+
+.category-card-items-count {
+  font-size: 11.5px;
+  color: #6B7280;
+}
+
+/* Boutons de navigation du carrousel */
+.carousel-nav-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+}
+
+.carousel-nav-btn {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.carousel-nav-btn.btn-prev {
+  background: #FFFFFF;
+  border: 1.5px solid var(--primary);
+  color: var(--primary);
+}
+
+.carousel-nav-btn.btn-prev:hover {
+  background: var(--primary-light);
+}
+
+.carousel-nav-btn.btn-next {
+  background: var(--primary);
+  border: 1.5px solid var(--primary);
+  color: #FFFFFF;
+}
+
+.carousel-nav-btn.btn-next:hover {
+  background: var(--primary-dark);
+}
+
+@media (max-width: 1024px) {
+  .categories-slider-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .categories-slider-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

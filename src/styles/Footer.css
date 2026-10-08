@@ -1,0 +1,280 @@
+/* =========================================================
+   BLEOUM DEDICATED WHITE FOOTER COMPONENT
+   ========================================================= */
+
+.bleoum-site-footer-white {
+  background: #FFFFFF !important;
+  color: #1F2937;
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid #ECEEEF;
+  font-size: 14px;
+}
+
+.footer-main-container {
+  position: relative;
+  padding: 65px 0 55px;
+}
+
+/* Livreur à vélo animé en boucle Caferio */
+.footer-cyclist-track {
+  overflow: hidden;
+  width: 100%;
+  height: 90px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 1;
+  border-bottom: 1px solid #F3F4F6;
+}
+
+@keyframes footer-cyclist-glide {
+  0% {
+    left: -160px;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+.footer-cyclist-track .cyclist-sprite {
+  background-image: url('/images/caferio/delivery-boy.svg');
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-size: contain;
+  width: 110px;
+  height: 85px;
+  position: absolute;
+  left: -160px;
+  bottom: 0;
+  animation: footer-cyclist-glide 24s linear infinite;
+  z-index: 1;
+  opacity: 0.9;
+}
+
+/* Grille Principale 2 Colonnes Harmonieuses */
+.footer-columns-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+/* Colonne 1 : Marque Bleoum */
+.footer-brand-column {
+  flex: 1 1 420px;
+  max-width: 500px;
+}
+
+.footer-brand-logo-wrap {
+  margin-bottom: 20px;
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+.footer-brand-logo-wrap:hover {
+  transform: scale(1.02);
+}
+
+.footer-brand-description {
+  font-size: 14.5px;
+  line-height: 1.75;
+  color: #4B5563;
+  margin-bottom: 24px;
+}
+
+/* Boutons Réseaux Sociaux */
+.footer-social-links-flex {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer-social-btn {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #F9FAFB;
+  border: 1.5px solid #E5E7EB;
+  color: #374151;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s ease;
+  text-decoration: none;
+}
+
+.footer-social-btn:hover {
+  background: #E68A00;
+  border-color: #E68A00;
+  color: #FFFFFF;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(230, 138, 0, 0.28);
+}
+
+/* Colonne 2 : Coordonnées */
+.footer-contact-column {
+  flex: 1 1 380px;
+  max-width: 460px;
+}
+
+.footer-section-title {
+  font-size: 20px;
+  font-weight: 800;
+  color: #111827;
+  margin-bottom: 24px;
+  position: relative;
+  padding-bottom: 10px;
+  letter-spacing: -0.2px;
+}
+
+.footer-title-accent-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 38px;
+  height: 3px;
+  background: #E68A00;
+  border-radius: 2px;
+}
+
+/* Liste des entrées de contact */
+.footer-contact-cards-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.footer-contact-entry {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 10px 14px;
+  border-radius: 12px;
+  background: #F9FAFB;
+  border: 1px solid #F3F4F6;
+  transition: all 0.2s ease;
+}
+
+.footer-contact-entry:hover {
+  background: #FFFFFF;
+  border-color: #FED7AA;
+  box-shadow: 0 4px 14px rgba(230, 138, 0, 0.08);
+  transform: translateX(4px);
+}
+
+.footer-contact-icon-pill {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: #FFF7ED;
+  border: 1px solid #FED7AA;
+  color: #E68A00;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.footer-contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.contact-sub-label {
+  font-size: 11px;
+  font-weight: 700;
+  color: #6B7280;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+
+.contact-main-value {
+  font-size: 14.5px;
+  font-weight: 700;
+  color: #111827;
+  text-decoration: none;
+}
+
+.link-highlight {
+  color: #111827;
+  transition: color 0.2s ease;
+}
+
+.link-highlight:hover {
+  color: #E68A00;
+}
+
+/* Barre Inférieure (Bottom Bar) */
+.footer-bottom-bar {
+  background: #FAFAFA;
+  border-top: 1px solid #ECEEEF;
+  padding: 22px 0;
+  font-size: 13.5px;
+}
+
+.footer-bottom-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-copyright-text {
+  margin: 0;
+  color: #6B7280;
+}
+
+.footer-copyright-text strong {
+  color: #111827;
+}
+
+.footer-legal-links-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.footer-legal-link {
+  color: #6B7280;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.footer-legal-link:hover {
+  color: #E68A00;
+}
+
+.footer-dot-separator {
+  color: #D1D5DB;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .footer-columns-row {
+    gap: 40px;
+  }
+  .footer-brand-column,
+  .footer-contact-column {
+    max-width: 100%;
+    flex: 1 1 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .footer-main-container {
+    padding: 45px 0 35px;
+  }
+  .footer-bottom-flex {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+}

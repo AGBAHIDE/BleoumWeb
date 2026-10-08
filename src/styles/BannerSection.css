@@ -1,0 +1,275 @@
+/* =========================================================
+   PROMO BANNER SECTION (EXACT LAYOUT BELOW HERO)
+   ========================================================= */
+
+.banner-promo-section {
+  background: #FFFFFF;
+}
+
+/* Card Base - No border-radius, no hover shadow */
+.banner-card-promo {
+  border-radius: 0 !important;
+  position: relative;
+  overflow: hidden;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.banner-card-promo:hover {
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+/* Card Color Themes */
+.bg-soft-sage {
+  background: #EDF3E8;
+}
+
+.bg-soft-neutral {
+  background: #F5F6F8;
+}
+
+/* =========================================================
+   LARGE LEFT BANNER (JUS & BOISSONS)
+   ========================================================= */
+
+.banner-card-large-promo {
+  min-height: 440px;
+  height: 100%;
+  padding: 35px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.banner-text-wrapper {
+  flex: 1;
+  max-width: 48%;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.banner-serif-subtitle {
+  font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  font-size: 27px;
+  color: #1E3A2F;
+  font-weight: 500;
+  line-height: 1.2;
+  display: block;
+  margin-bottom: 2px;
+}
+
+.banner-bold-title {
+  font-size: 28px;
+  font-weight: 800;
+  color: #071C1F;
+  line-height: 1.25;
+  margin-bottom: 16px;
+}
+
+.banner-bullet-list {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #738A7C;
+  letter-spacing: 0.6px;
+  margin-bottom: 24px;
+  text-transform: uppercase;
+}
+
+.banner-action-pill-btn {
+  background: #E68A00;
+  color: #FFFFFF !important;
+  border-radius: 30px;
+  padding: 10px 24px;
+  font-size: 13.5px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 14px rgba(230, 138, 0, 0.3);
+}
+
+.banner-action-pill-btn:hover {
+  background: #D47A00;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(230, 138, 0, 0.45);
+}
+
+.banner-img-large-box {
+  flex: 1.25;
+  max-width: 52%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  height: 100%;
+}
+
+.banner-floating-img-large {
+  max-width: 100%;
+  max-height: 360px;
+  width: auto;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+  transform: scale(1.15);
+  transition: transform 0.4s ease;
+}
+
+.banner-card-promo:hover .banner-floating-img-large {
+  transform: scale(1.2);
+}
+
+/* =========================================================
+   STACKED SMALL RIGHT BANNERS
+   ========================================================= */
+
+.banner-card-small-promo {
+  min-height: 205px;
+  padding: 18px 26px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.banner-small-text-box {
+  flex: 1.1;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.banner-small-heading {
+  font-size: 19px;
+  font-weight: 500;
+  color: #071C1F;
+  line-height: 1.35;
+  margin-bottom: 12px;
+}
+
+.banner-small-heading strong {
+  font-weight: 800;
+  color: #071C1F;
+}
+
+.banner-price-tag {
+  display: flex;
+  align-items: baseline;
+  gap: 3px;
+}
+
+.price-prefix {
+  font-size: 13px;
+  font-weight: 600;
+  color: #6B7280;
+}
+
+.price-value {
+  font-size: 21px;
+  font-weight: 800;
+  color: #E68A00;
+}
+
+.price-currency {
+  font-size: 12px;
+  font-weight: 700;
+  color: #E68A00;
+}
+
+.banner-small-img-box {
+  flex: 1.1;
+  max-width: 50%;
+  height: 175px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.banner-floating-img-small {
+  max-width: 100%;
+  max-height: 175px;
+  width: auto;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+  transform: scale(1.18);
+  transition: transform 0.4s ease;
+}
+
+.banner-card-promo:hover .banner-floating-img-small {
+  transform: scale(1.23);
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 991px) {
+  .banner-card-large-promo {
+    min-height: 380px;
+    padding: 30px 25px;
+  }
+  .banner-serif-subtitle {
+    font-size: 23px;
+  }
+  .banner-bold-title {
+    font-size: 24px;
+  }
+  .banner-small-heading {
+    font-size: 17px;
+  }
+  .banner-floating-img-large {
+    max-height: 290px;
+    transform: scale(1.05);
+  }
+  .banner-floating-img-small {
+    max-height: 145px;
+    transform: scale(1.08);
+  }
+}
+
+@media (max-width: 768px) {
+  .banner-card-large-promo {
+    flex-direction: column;
+    text-align: center;
+    gap: 25px;
+    padding: 30px 20px;
+  }
+  .banner-text-wrapper {
+    max-width: 100%;
+    align-items: center;
+  }
+  .banner-img-large-box {
+    max-width: 90%;
+  }
+  .banner-floating-img-large {
+    max-height: 250px;
+    transform: scale(1);
+  }
+  .banner-card-small-promo {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+    padding: 25px 20px;
+  }
+  .banner-small-text-box {
+    align-items: center;
+    text-align: center;
+  }
+  .banner-small-img-box {
+    max-width: 80%;
+    height: auto;
+  }
+  .banner-floating-img-small {
+    max-height: 140px;
+    transform: scale(1);
+  }
+}

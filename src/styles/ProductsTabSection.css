@@ -1,0 +1,438 @@
+/* =========================================================
+   OUR PRODUCTS & FEATURED PRODUCTS (CATEGORY SELECTORS & CARDS)
+   ========================================================= */
+
+.ltn__product-tab-area,
+.ltn__product-area {
+  background: #FFFFFF;
+}
+
+.section-title-area .section-title {
+  font-size: 45px;
+  font-weight: 600;
+  color: #071c1f;
+  margin-bottom: 22px;
+}
+
+.section-subtitle-pill {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #E68A00;
+  margin-bottom: 8px;
+}
+
+/* =========================================================
+   HORIZONTAL CATEGORY PILL SELECTOR (NO SCROLLBAR)
+   ========================================================= */
+
+.categories-pill-scroll-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  padding: 6px 4px 8px;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none !important; /* Firefox */
+  -ms-overflow-style: none !important; /* IE and Edge */
+}
+
+.categories-pill-scroll-wrapper::-webkit-scrollbar {
+  display: none !important; /* Chrome, Safari, Opera */
+  width: 0 !important;
+  height: 0 !important;
+}
+
+.categories-pill-scroll-track {
+  display: inline-flex;
+  gap: 12px;
+  min-width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 2px;
+}
+
+.category-pill-card {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #FFFFFF;
+  border: 1.5px solid #E5E7EB;
+  border-radius: 14px;
+  padding: 10px 18px;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  white-space: nowrap;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+  font-family: inherit;
+}
+
+.category-pill-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  transition: transform 0.2s ease;
+  width: 24px;
+  height: 24px;
+}
+
+.category-pill-icon-img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  display: block;
+}
+
+.category-pill-name {
+  font-size: 14px;
+  font-weight: 700;
+  color: #374151;
+  transition: color 0.2s ease;
+}
+
+/* Hover State */
+.category-pill-card:hover {
+  border-color: #FDBA74;
+  background: #FFFDF9;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.06);
+}
+
+.category-pill-card:hover .category-pill-icon {
+  transform: scale(1.15);
+}
+
+.category-pill-card:hover .category-pill-name {
+  color: #EA580C;
+}
+
+/* Active Selected State (Orange / Peach tint as in screenshot) */
+.category-pill-card.active {
+  background: #FFF7ED !important;
+  border-color: #FB923C !important;
+  box-shadow: 0 4px 14px rgba(234, 88, 12, 0.16) !important;
+  transform: translateY(-1px);
+}
+
+.category-pill-card.active .category-pill-icon {
+  transform: scale(1.12);
+}
+
+.category-pill-card.active .category-pill-name {
+  color: #EA580C !important;
+  font-weight: 800;
+}
+
+/* =========================================================
+   PRODUCT CARD (COMPACT HEIGHT - NO EMPTY BOTTOM SPACE)
+   ========================================================= */
+
+.ltn__product-item-3 {
+  background: #FFFFFF !important;
+  border: 1px solid #ECEEEF !important;
+  border-radius: 14px !important;
+  padding: 10px 10px 12px !important;
+  position: relative;
+  transition: all 0.35s ease;
+  height: auto !important;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0 !important;
+}
+
+.ltn__product-item-3:hover {
+  border-color: #E68A00 !important;
+  box-shadow: 0 10px 24px rgba(7, 28, 31, 0.08) !important;
+  transform: translateY(-3px);
+}
+
+/* Image Container */
+.ltn__product-item .product-img {
+  position: relative;
+  height: 170px !important;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px !important;
+  overflow: hidden;
+  background: #F4F5F7;
+  border-radius: 10px !important;
+  padding: 0 !important;
+}
+
+.ltn__product-item .product-img a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.ltn__product-item .product-img img,
+.product-img img {
+  position: relative !important;
+  z-index: 1 !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
+  object-fit: cover !important;
+  display: block !important;
+  margin: 0 auto !important;
+  border-radius: 10px !important;
+  transition: transform 0.5s ease;
+}
+
+.ltn__product-item:hover .product-img img {
+  transform: scale(1.07);
+}
+
+/* Badges (Top Right) */
+.product-badge {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 5;
+}
+
+.product-badge ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.product-badge .sale-badge {
+  font-size: 11px;
+  font-weight: 800;
+  padding: 3px 8px;
+  border-radius: 6px;
+  display: inline-block;
+  line-height: 1.2;
+}
+
+.badge-red {
+  background: #FF3B30;
+  color: #FFFFFF;
+}
+
+.badge-gold {
+  background: #E68A00;
+  color: #FFFFFF;
+}
+
+/* =========================================================
+   HOVER ACTION ICONS (NO WHITE PILL BACKGROUND)
+   ========================================================= */
+
+.product-hover-action {
+  position: absolute;
+  top: 50% !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: auto !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-50%) scale(0.9) !important;
+  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  z-index: 10;
+  background: transparent !important;
+}
+
+.ltn__product-item:hover .product-hover-action {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(-50%) scale(1) !important;
+}
+
+.product-hover-action ul {
+  display: flex !important;
+  gap: 10px !important;
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  background: transparent !important;
+  backdrop-filter: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+.product-hover-action li {
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style: none !important;
+  border: none !important;
+  background: transparent !important;
+  width: auto !important;
+  height: auto !important;
+  float: none !important;
+  line-height: normal !important;
+}
+
+.product-hover-action button {
+  width: 36px !important;
+  height: 36px !important;
+  border-radius: 50% !important;
+  border: 1px solid #ECEEEF !important;
+  background: #FFFFFF !important;
+  color: #071c1f !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+  transition: all 0.25s ease !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.16) !important;
+  padding: 0 !important;
+}
+
+.product-hover-action button:hover {
+  background: #E68A00 !important;
+  color: #FFFFFF !important;
+  border-color: #E68A00 !important;
+  transform: scale(1.15) !important;
+  box-shadow: 0 6px 18px rgba(230, 138, 0, 0.45) !important;
+}
+
+/* =========================================================
+   PRODUCT INFO (LEFT-ALIGNED: TITLE + PRICE - TIGHT FIT)
+   ========================================================= */
+
+.ltn__product-item-3 .product-info,
+.ltn__product-item .product-info {
+  display: flex !important;
+  flex-direction: column !important;
+  text-align: left !important;
+  padding: 0 2px !important;
+  margin: 0 !important;
+}
+
+.product-title,
+.ltn__product-item-3 .product-title {
+  font-size: 14.5px !important;
+  font-weight: 700 !important;
+  line-height: 1.35 !important;
+  margin-bottom: 4px !important;
+  margin-top: 0 !important;
+  color: #111827 !important;
+  text-align: left !important;
+}
+
+.product-title a,
+.ltn__product-item-3 .product-title a {
+  color: #111827 !important;
+  text-decoration: none !important;
+  transition: color 0.2s ease;
+}
+
+.product-title a:hover,
+.ltn__product-item-3 .product-title a:hover {
+  color: #E68A00 !important;
+}
+
+.product-price,
+.ltn__product-item-3 .product-price {
+  font-size: 15.5px !important;
+  font-weight: 800 !important;
+  color: #111827 !important;
+  text-align: left !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  line-height: 1.2 !important;
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.product-price span,
+.ltn__product-item-3 .product-price span {
+  font-weight: 800 !important;
+  color: #111827 !important;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .categories-pill-scroll-track {
+    justify-content: flex-start;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .ltn__product-item .product-img {
+    height: 150px !important;
+  }
+  .section-title-area .section-title {
+    font-size: 24px;
+  }
+  .category-pill-card {
+    padding: 8px 14px;
+    gap: 8px;
+  }
+  .category-pill-icon {
+    width: 20px;
+    height: 20px;
+  }
+  .category-pill-icon-img {
+    width: 20px;
+    height: 20px;
+  }
+  .category-pill-name {
+    font-size: 13px;
+  }
+  .product-title {
+    font-size: 13.5px !important;
+  }
+  .product-price {
+    font-size: 14.5px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .ltn__product-tab-area,
+  .ltn__product-area {
+    padding-top: 45px !important;
+    padding-bottom: 40px !important;
+  }
+  .section-title-area .section-title {
+    font-size: 21px !important;
+    margin-bottom: 16px;
+  }
+  .section-subtitle-pill {
+    font-size: 11px !important;
+  }
+  .ltn__product-item-3 {
+    padding: 8px 8px 10px !important;
+    border-radius: 12px !important;
+  }
+  .ltn__product-item .product-img {
+    height: 135px !important;
+    border-radius: 8px !important;
+    margin-bottom: 6px !important;
+  }
+  .product-title,
+  .ltn__product-item-3 .product-title {
+    font-size: 12.5px !important;
+    line-height: 1.3 !important;
+    margin-bottom: 3px !important;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .product-price,
+  .ltn__product-item-3 .product-price {
+    font-size: 13.5px !important;
+  }
+  .product-hover-action button {
+    width: 32px !important;
+    height: 32px !important;
+  }
+  .product-badge .sale-badge {
+    font-size: 9.5px !important;
+    padding: 2px 6px !important;
+  }
+}
